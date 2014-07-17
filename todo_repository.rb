@@ -12,6 +12,6 @@ class TodoRepository
   end
 
   def remove(todo_id)
-    @todo.delete(todo_id)
+    @todos.delete(todo_id)
   end
 end

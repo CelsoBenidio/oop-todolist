@@ -4,6 +4,8 @@ A simple app to demonstrate the MVC pattern with a command line app.
 $ ruby start.rb
 ```
 
+Then hit `Ctrl-C` to quit the program. You'll lose all your todos!
+
 ## Architecture
 
 - **Model**: `TodoItem`

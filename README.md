@@ -1,3 +1,11 @@
+# Object Oriented Programming
+
+Part of [Karr Examples](https://github.com/lewagon/karr-examples)
+
+## Building Software
+
+### TODO app
+
 A simple app to demonstrate the MVC pattern with a command line app.
 
 ```bash
@@ -6,7 +14,7 @@ $ ruby start.rb
 
 Then hit `Ctrl-C` to quit the program. You'll lose all your todos!
 
-## Architecture
+#### Architecture
 
 - **Model**: `TodoItem`
 - **View**: `Display`

@@ -1,4 +1,4 @@
-class TodoItem
+class Task
   attr_reader :description, :done
 
   def initialize(description)

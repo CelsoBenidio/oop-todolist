@@ -1,25 +1,29 @@
+require_relative 'task'
+require_relative 'view'
+
 class Controller
-  def initialize
-    @repository = TodoRepository.new
-    @display = Display.new
+  def initialize(repository)
+    @repository = repository
+    @view = View.new
   end
 
-  def fetch_and_print_todos
-    @display.print_todos(@repository.todos)
+  def fetch_and_print_tasks
+    @view.print_tasks(@repository.all)
   end
 
-  def add_todo
-    description = @display.get_new_todo_description
-    @repository.add(TodoItem.new(description))
+  def add_task
+    description = @view.get_new_task_description
+    @repository.add(Task.new(description))
   end
 
-  def remove_todo
-    todo_id_to_remove = @display.get_todo_id_to_remove
-    @repository.remove(todo_id_to_remove)
+  def remove_task
+    index = @view.get_task_index_to_remove
+    @repository.remove(index)
   end
 
-  def mark_todo_as_done
-    todo_id = @display.gets_todo_id_to_mark_as_done
-    todo = @repository.todos[todo_id].mark_as_done
+  def mark_task_as_done
+    index = @view.get_task_index_to_mark_as_done
+    task = @repository.find(index)
+    task.mark_as_done
   end
 end

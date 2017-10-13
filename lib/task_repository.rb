@@ -1,4 +1,6 @@
-class TasksRepository
+require_relative 'task'
+
+class TaskRepository
   def initialize
     @tasks = []
   end

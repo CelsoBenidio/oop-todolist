@@ -1,4 +1,3 @@
-require_relative 'task'
 require_relative 'tasks_view'
 
 class TasksController
